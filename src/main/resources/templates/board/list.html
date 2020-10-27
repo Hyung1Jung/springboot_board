@@ -6,6 +6,16 @@
 
     <link rel="stylesheet" th:href="@{/css/board.css}">
 </head>
+
+<!-- 검색 form -->
+<form action="/board/search" method="GET">
+    <div>
+        <input name="keyword" type="text" placeholder="검색어를 입력해주세요">
+    </div>
+
+    <button>검색하기</button>
+</form>
+
 <body>
 <!-- HEADER -->
 <div th:insert="common/header.html" id="header"></div>
