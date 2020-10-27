@@ -12,6 +12,11 @@ spring:
     hibernate:
       format_sql: true
       ddl-auto: create
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
 
 logging:
   level:
@@ -22,3 +27,5 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
+
+
