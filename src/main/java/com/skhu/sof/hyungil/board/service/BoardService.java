@@ -26,7 +26,7 @@ public class BoardService {
         List<BoardEntity> boardEntities = boardRepository.findAll();
         List<BoardDto> boardDtoList = new ArrayList<>();
 
-        for ( BoardEntity boardEntity : boardEntities) {
+        for (BoardEntity boardEntity : boardEntities) {
             BoardDto boardDTO = BoardDto.builder()
                     .id(boardEntity.getId())
                     .title(boardEntity.getTitle())
@@ -117,7 +117,7 @@ public class BoardService {
         Double postsTotalCount = Double.valueOf(this.getBoardCount());
 
         // 총 게시글 기준으로 계산한 마지막 페이지 번호 계산 (올림으로 계산)
-        Integer totalLastPageNum = (int)(Math.ceil((postsTotalCount/PAGE_POST_COUNT)));
+        Integer totalLastPageNum = (int) (Math.ceil((postsTotalCount / PAGE_POST_COUNT)));
 
         // 현재 페이지를 기준으로 블럭의 마지막 페이지 번호 계산
         Integer blockLastPageNum = (totalLastPageNum > curPageNum + BLOCK_PAGE_NUM_COUNT)
